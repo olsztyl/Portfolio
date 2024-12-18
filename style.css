@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fefaf6;
+    color: #000;
+}
+
+header {
+    display: flex; /* Flexbox pour aligner les éléments */
+    justify-content: space-between; /* Logo + Nom à gauche, navigation à droite */
+    align-items: center; /* Centre verticalement les éléments */
+    padding: 20px 50px;
+    background-color: #fefaf6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    z-index: 1 /* Assure que l'en-tête reste au-dessus du contenu */
+}
+
+/* Logo et titre */
+header .header-left {
+    display: flex; /* Aligne le logo et le texte horizontalement */
+    align-items: center;
+}
+
+header .header-left img {
+    
+    height: 80px; /* Taille réduite du logo */
+    width: auto;  /* Garde les proportions */
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+header .header-left h2 {
+    font-size: xx-large; /* Taille du texte */
+    margin: 0;
+    color: #000;
+}
+
+/* Navigation */
+header nav {
+    display: flex; /* Aligne les liens horizontalement */
+    gap: 80px; /* Espace régulier entre les liens */
+    margin-right: 50px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: x-large;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+header nav a:hover {
+    color: #274DB4; /* Couleur de survol */
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Aligne les éléments verticalement sur petits écrans */
+        align-items: flex-start; /* Aligne les éléments sur la gauche */
+        padding: 10px 20px;
+    }
+
+    header nav {
+        flex-direction: column; /* Les liens s'empilent verticalement */
+        gap: 10px; /* Espacement entre les liens */
+        margin-top: 10px;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    header nav a {
+        font-size: 1rem; /* Ajuste la taille des liens sur mobile */
+    }
+}
+
+.logo {
+    height: 50px; /* Taille réduite du logo */
+    width: auto;  /* Garde les proportions */
+    margin-left: auto; /* Pousse le logo vers la droite */
+
+}
+
+.titrelogo {
+    margin-left: 20px;
+
+}
+/* Section principale */
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    margin: auto;
+}
+
+
+.main-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.main-section h2 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.main-section button {
+    margin-right: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-blue {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #274DB4; /* Bleu */
+    color: white;
+    text-align: center;
+    text-decoration: none; /* Enlever le soulignement */
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-blue:hover {
+    background-color: #1e3c8f; /* Changement de couleur au survol */
+}
+
+.btn-blue:active {
+    background-color: #0d2f6a; /* Changement de couleur quand le bouton est cliqué */
+}
+
+/* Style pour les autres boutons */
+.btn-outline {
+    padding: 10px 20px;
+    border: 2px solid #274DB4;
+    background-color: transparent;
+    color: #274DB4;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline:hover {
+    background-color: #274DB4;
+    color: white;
+}
+
+/* Photo de profil */
+.main-section img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 0px solid #274DB4;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Par défaut, 4 colonnes */
+    gap: 20px;
+    padding: 20px;
+    width: 100%; /* Assure que le conteneur prend toute la largeur disponible */
+}
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 3 colonnes pour les écrans moyens */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr); /* 2 colonnes pour les écrans plus petits */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 colonne pour les très petits écrans */
+    }
+}
+
+.project-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05)
+}
+
+.project-card img {
+    width: 150px;
+    height: 100%;
+}
+
+.project-info {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 800px){
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
