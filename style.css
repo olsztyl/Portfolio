@@ -118,6 +118,7 @@ body {
 /* Section Accueil */
 .accueil-content {
     text-align: center;
+    
 }
 
 .accueil-content h1 {
@@ -129,6 +130,7 @@ body {
 .accueil-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    justify-content: center;
 }
 
 /* Section À propos */
