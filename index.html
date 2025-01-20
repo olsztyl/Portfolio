@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <header class="hero-header">
+    <header id="accueillogo" class="hero-header">
         <img src="PAGEACCUEIL.png" alt="Logo de Loan et titre">
     </header>
 
@@ -22,8 +22,7 @@
                 <label for="menu-toggle" class="burger-icon">&#9776;</label>
 
                 <div class="menu-left">
-                    <a class="navbarblanc" href="#accueil">Accueil</a>
-                    <a class="navbarblanc" href="#apropos">À propos</a>
+                    <a class="navbarblanc" href="#creations">Créations</a>
                     <a class="navbarblanc" href="#projets">Projets</a>
                     <a class="navbarblanc" href="#contact">Contact</a>
                 </div>
@@ -37,8 +36,8 @@
     <section id="accueil" class="card">
         <div class="container accueil-content">
             <h1>Loan Olsztynski</h1>
-            <p>Développeur créatif et passionné, prêt à transformer vos idées en solutions numériques.</p>
-            <a class="btn-blue" href="#apropos">En savoir plus</a>
+            <p>Passionné de montage vidéo et photo, retrouvez mes créations ici !</p>
+            <a class="btn-blue" href="#creations">Voir mes créations</a>
         </div>
     </section>
 
@@ -46,53 +45,66 @@
     <section id="apropos" class="card">
         <div class="container">
             <h2>À propos de moi</h2>
-            <p>Je suis Loan Olsztynski, développeur passionné avec une expertise en HTML, CSS, JavaScript, et outils de conception graphique comme Adobe Premiere, Photoshop et Illustrator.</p>
+            <p>Originaire de Castres dans le Tarn, je suis titulaire d'un baccalauréat général scientifque et d'une licence de psychologie obtenue à l'Université Toulouse Jean Jaurès.</p>
             <div class="skills">
-                <div class="skill">
-                    <img src="premiere-pro.png" alt="Premiere Pro">
-                    <p>Premiere Pro</p>
-                </div>
-                <div class="skill">
-                    <img src="photoshop.png" alt="Photoshop">
-                    <p>Photoshop</p>
-                </div>
-                <div class="skill">
-                    <img src="adobe-illustrator.png" alt="Illustrator">
-                    <p>Illustrator</p>
-                </div>
-                <div class="skill">
-                    <img src="html-5.png" alt="HTML5">
-                    <p>HTML5</p>
-                </div>
+                <a class="skill" href="https://www.univ-tlse2.fr/" target="_blank" rel="noopener noreferrer">
+                    <img src="Logo_de_l'université_Toulouse_-_Jean_Jaurès.svg (1).png" alt="Logo de l'université Toulouse Jean Jaurès" style="width: 200px; height: auto;">
+                </a>         
+            </div>
+            <p>Après ma licence, je me suis rendu compte que ce qui me plaisait réellement cétait d'exercer ma véritable passion : le montage. J'ai toujours aimé créer pour moi ou mes amis. Pendant ma licence j'ai petit à petit découvert des logiciels tels que Photoshop ou Sony Vegas Pro de manière autodidacte. C'est pourquoi j'ai entrepris une démarche de réorientation en voulant rejoindre le BUT MMI. Après des refus, j'ai finalement accédé à un diplôme d'un an formant une sorte de passerelle dans l'informatique : la Mention Complémentaire : Services Numériques aux Organisations au lycée Raymond Naves de Toulouse.</p>
+            <div class="skills">
+                <a class="skill" href="https://raymond-naves.mon-ent-occitanie.fr/" target="_blank" rel="noopener noreferrer">
+                    <img src="LOGOSNO.png" alt="Logo de la mention complémentaire : Services Numériques aux Organisations" style="width: 200px; height: auto;">
+                </a>         
+            </div>
+            <p> J'ai effectué un stage en développement web et ait découvert l'envers du décor pour la première fois durant cette année passerelle. C'est par la suite que j'ai pu postuler à nouveau au BUT MMI et fut accepté au BUT MMI de Corte en Corse !</p>
+            <div class="skills">
+                <a class="skill" href="https://www.univ-corse.fr/" target="_blank" rel="noopener noreferrer">
+                    <img src="mmilogo2.png" alt="Logo du BUT MMI de Corte" style="width: 200px; height: auto;">
+                </a>         
             </div>
         </div>
     </section>
 
+    
+    
     <!-- Section Projets -->
     <section id="projets" class="card">
         <div class="container">
             <h2>Mes Projets</h2>
             <div class="project-cards">
+                <a href="https://www.youtube.com/@lolo_prod" target="_blank" class="project-card-link">
+                    <div  class="project-card">
+                        <img  src="Loloprodlogo.png" alt="Logo de la chaîne YouTube de Loan Olsztynski">
+                        <div class="card-content">
+                            <h3>Chaîne YouTube</h3>
+                            <p>J'ai pour habitude de créer des contenus autour de moments de ma vie. J'aime réaliser des petites vidéos à l'aide de Premiere Pro.</p>
+                        </div>
+                    </div>
+                </a>
                 <div class="project-card">
-                    <img src="Loloprodportfolio.png" alt="Projet 1">
+                    <img src="mmilogo.png" alt="Logo du BUT MMI de Corte">
                     <div class="card-content">
-                        <h3>Chaîne YouTube</h3>
-                        <p>Un projet personnel pour partager des tutoriels vidéo.</p>
+                        <h3>BUT MMI</h3>
+                        <p>Avec le BUT MMI j'ai pu réaliser des affiches de toutes sortes que vous pourrez retrouver sur ce portfolio. J'ai notamment étendu mes compétences sur la suite Adobe.</p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <img src="https://placehold.co/300" alt="Projet 2">
-                    <div class="card-content">
-                        <h3>Portfolio</h3>
-                        <p>Un portfolio interactif pour présenter mes compétences.</p>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="creations" class="card">
+        <div class="container">
+            <h2>Mes créations</h2>
+            <div class="creations-gallery">
+                <div class="creation-item">
+                    <img src="Loan_Olsztynski_Affiche_RVB_100dpi.jpg" alt="Affiche 1">
                 </div>
-                <div class="project-card">
-                    <img src="https://placehold.co/300" alt="Projet 2">
-                    <div class="card-content">
-                        <h3>Portfolio</h3>
-                        <p>Un portfolio interactif pour présenter mes compétences.</p>
-                    </div>
+                <div class="creation-item">
+                    <img src="Loan_Olsztynski_AfficheParfum.jpg" alt="Affiche 2">
+                </div>
+                <div class="creation-item">
+                    <img src="chichiaffiche.png" alt="Affiche 3">
                 </div>
             </div>
         </div>
@@ -119,7 +131,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Loan Olsztynski. Conception par Loan.</p>
+        <p>&copy; 2025 Lolo Prod.</p>
     </footer>
 </body>
 </html>

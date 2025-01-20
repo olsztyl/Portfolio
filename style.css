@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* Variables globales */
 :root {
     --primary-color: #274DB4;
@@ -141,8 +145,13 @@ body {
 }
 
 .skill img {
-    width: 60px;
+    width: 300px;
     margin-bottom: 0.5rem;
+    transition: 0.2s;
+}
+
+.skill img:hover {
+    transform: scale(1.05);
 }
 
 /* Section Projets */
@@ -180,6 +189,12 @@ body {
 .card-content {
     padding: 1rem;
     text-align: center;
+}
+
+.project-card-link {
+    text-decoration: none; /* Supprime le soulignement */
+    color: inherit; /* Conserve la couleur du texte */
+    display: block; /* Assure que toute la div est cliquable */
 }
 
 /* Section Contact */
@@ -234,8 +249,6 @@ footer {
         display: flex; /* Afficher les liens lorsque la case est cochée */
     }
 
-    
-    
     .hero-header img {
         max-height: 300px;
         object-fit: cover;
@@ -326,4 +339,46 @@ footer {
     .project-card {
         width: 100%;
     }
+}
+
+.creations-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.creation-item {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 210px; /* Largeur format A4 */
+    height: 297px; /* Hauteur format A4 */
+}
+
+.creation-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.creation-item img:hover {
+    transform: scale(1.05);
+}
+
+form textarea {
+    resize: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+form input {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    text-align: justify;
 }
