@@ -1,0 +1,271 @@
+/* :root {
+    --primary-color: #274DB4;
+    --secondary-color: #1e3c8f;
+    --text-color: #333;
+    --bg-color: #fefaf6;
+    --white: #fff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container,
+.nav-content,
+.left-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-header {
+    height: 3em;
+    width: auto;
+}
+
+.menu-left {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbarblanc {
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbarblanc:hover {
+    color: var(--secondary-color);
+}
+
+.btn-blue {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-blue:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-blue {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: transparent;
+    /* ou white si tu préfères */
+color: var(--primary-color);
+border: 2px solid var(--primary-color);
+border-radius: 5px;
+font-weight: 600;
+transition: 0.3s;
+cursor: pointer;
+}
+
+.btn-outline-blue:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.accueil-content {
+    text-align: center;
+}
+
+.accueil-content h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.accueil-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.project-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.creations-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.creationitem {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 210px;
+    height: 297px;
+}
+
+.creationitem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.creationitem img:hover {
+    transform: scale(1.05);
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+form textarea {
+    resize: none;
+}
+
+form button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+}
+
+footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .project-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .accueil-content h1 {
+        font-size: 2rem;
+    }
+
+    .accueil-content p {
+        font-size: 1rem;
+    }
+
+    .project-cards {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .accueil-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .accueil-content p {
+        font-size: 0.9rem;
+    }
+
+    .project-cards {
+        gap: 0.5rem;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
+
+*/

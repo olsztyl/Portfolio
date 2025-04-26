@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Olsztynski - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+:root {
+    --primary-color: #274DB4;
+    --secondary-color: #1e3c8f;
+    --text-color: #333;
+    --bg-color: #fefaf6;
+    --white: #fff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 64px;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .container,
+.nav-content,
+.left-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-header {
+    height: 3em;
+    width: auto;
+}
+
+.menu-left {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu-left a {
+    
+    transition: all .3s ease;
+}
+
+.menu-left a:hover {
+    text-shadow: 3px 3px 20px rgb(133, 161, 255), -2px 1px 30px #fff;
+}
+
+
+.navbarblanc {
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbarblanc:hover {
+    color: var(--secondary-color);
+}
+
+.btn-blue {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+    margin-right:5px;
+}
+
+.btn-blue:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-blue {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: transparent;
+    /* ou white si tu préfères */
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-weight: 600;
+    margin-left:5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-outline-blue:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    transform: scale(1.05);
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.accueil-content {
+    text-align: center;
+}
+
+.accueil-content h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.accueil-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.project-cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.creations-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.creationitem {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 210px;
+    height: 297px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.creationitem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.creationitem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+form textarea {
+    resize: none;
+}
+
+form button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: var(--secondary-color);
+}
+
+footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .project-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .accueil-content h1 {
+        font-size: 2rem;
+    }
+
+    .accueil-content p {
+        font-size: 1rem;
+    }
+
+    .project-cards {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .accueil-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .accueil-content p {
+        font-size: 0.9rem;
+    }
+
+    .project-cards {
+        gap: 0.5rem;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}    
+
+            .carousel-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .carousel-container img {
+        max-width: 80%;
+        max-height: 80%;
+        margin: 0 auto;
+        border-radius: 1rem;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .carousel-container .prev,
+    .carousel-container .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.8rem;
+        color: white;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(8px);
+        border: none;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .carousel-container .prev:hover,
+    .carousel-container .next:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .carousel-container .prev {
+        left: 20px;
+    }
+
+    .carousel-container .next {
+        right: 20px;
+    }
+
+
+    </style>
+</head>
+<body>
+<header class="navbar">
+    <div class="container nav-wrapper">
+        <div class="left-side" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
+            <img src="logololo.png" alt="Logo" class="logo-header" style="height: 3em; width: auto;">
+            <div class="menu-left">
+                <a class="navbarblanc" href="#accueil">Accueil</a>
+                <a class="navbarblanc" href="#projets">Projets</a>
+                <a class="navbarblanc" href="#contact">Contact</a>
+            </div>
+        </div>
+        
+    </div>
+</header>
+
+
+<section id="accueil" class="card accueil-content">
+    <div class="container">
+        <h1>Loan Olsztynski</h1>
+        <p style="text-align: center;">Passionné de montage vidéo et photo, retrouvez mes créations ici !</p>
+        <a class="btn-blue" href="LoanOlsztynskiCV.pdf" download>Télécharger CV</a>
+        <// a class="btn-outline-blue"></a>
+    </div>
+</section>
+
+<section id="projets" class="card">
+    <div class="container">
+        <h2>Mes Projets</h2>
+        <div class="project-cards">
+            <a href="https://www.youtube.com/@lolo_prod" target="_blank" class="project-card-link">
+                <div class="project-card">
+                    <img src="Loloprodlogo.png" alt="Logo de la chaîne YouTube de Loan Olsztynski" >
+                    <div class="card-content">
+                        <h3>Chaîne YouTube</h3>
+                        <p>Ma chaîne personnelle de création audiovisuelle.</p>
+                    </div>
+                </div>
+            </a>
+            <div class="project-card">
+                <img src="mmilogo.png" alt="Logo du BUT MMI de Corte">
+                <div class="card-content">
+                    <h3>BUT MMI</h3>
+                    <p>Création d'affiches et maîtrise de la suite Adobe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="creations" class="card">
+    <div class="container">
+        <h2 style="margin-bottom: 5px;">Mes créations</h2>
+        <div class="creations-gallery">
+            <div class="creationitem" onclick="openCarousel(0)" style="cursor: pointer;">
+                <img src="Loan_Olsztynski_Affiche_RVB_100dpi.jpg" alt="Affiche Corsica Games Week">
+            </div>
+            <div class="creationitem" onclick="openCarousel(1)" style="cursor: pointer;">
+                <img src="Loan_Olsztynski_AfficheParfum.jpg" alt="Affiche de parfum fictif">
+            </div>
+            <div class="creationitem" onclick="openCarousel(2)" style="cursor: pointer;">
+                <img src="chichiaffiche.png" alt="Affiche Levan Chilachava">
+            </div>
+            <div class="creationitem" onclick="openCarousel(3)" style="cursor: pointer;">
+                <img src="affichequartscastres.jpg" alt="Affiche Quarts de finale Castre">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="card">
+    <div class="container">
+        <h2>Contactez-moi</h2>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Votre nom" required>
+            <input type="email" name="email" placeholder="Votre email" required>
+            <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+            <button type="submit" class="btn-blue">Envoyer</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Lolo Prod.</p>
+</footer>
+
+<!-- Carrousel Modal -->
+<div id="carousel" class="carousel-container">
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <img id="carouselImage" src="" alt="Image du carrousel">
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<script>
+    let currentSlideIndex = 0;
+    const images = [
+        "Loan_Olsztynski_Affiche_RVB_100dpi.jpg",
+        "Loan_Olsztynski_AfficheParfum.jpg",
+        "chichiaffiche.png",
+        "affichequartscastres.jpg"
+    ];
+
+    // Ouvrir le carrousel à partir de l'image cliquée
+    function openCarousel(index) {
+        currentSlideIndex = index;
+        document.getElementById('carouselImage').src = images[currentSlideIndex];
+        document.getElementById('carousel').style.display = "flex";
+    }
+
+    // Fermer le carrousel
+    function closeCarousel() {
+        document.getElementById('carousel').style.display = "none";
+    }
+
+    // Naviguer dans les images
+    function moveSlide(step) {
+        currentSlideIndex += step;
+        if (currentSlideIndex < 0) {
+            currentSlideIndex = images.length - 1;
+        } else if (currentSlideIndex >= images.length) {
+            currentSlideIndex = 0;
+        }
+        document.getElementById('carouselImage').src = images[currentSlideIndex];
+    }
+
+    // Fermer le carrousel lorsque l'on clique sur l'arrière-plan
+    document.getElementById('carousel').addEventListener('click', function(event) {
+        if (event.target === this) {
+            closeCarousel();
+        }
+    });
+</script>
+
+</body>
+</html>
